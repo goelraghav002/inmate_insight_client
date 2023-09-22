@@ -98,4 +98,105 @@ export const courses = [
       },
     ],
   },
+  {
+    id: 2,
+    title: 'Inside Maximum Security: Case Study: Singapore',
+    duration: '184',
+    total_lecture: 4,
+    completed_lecture: 3,
+    course_by: 'Gagandeep Magan',
+    details: [
+      {
+        title: 'How Tough Is Singapore Prison Life?',
+        link: "https://www.youtube.com/embed/tJqRPycWUDg?si=jYSFFQ2t-uCMYGe7",
+        duration: 46,
+      }, 
+      {
+        title: 'Coping With Family Problems While In Prison',
+        link: "https://www.youtube.com/embed/UITJvieslFY?si=hUhTEOEFf9kOBt70",
+        duration: 46, 
+      },
+      {
+        title: 'How Do You Break Bad Habits In Prison?',
+        link: "https://www.youtube.com/embed/6Bfg9jMOV9A?si=4kOl2Gwp40W_jbep",
+        duration: 46, 
+      },
+      {
+        title: 'Getting Ready To Be Released?',
+        link: "https://www.youtube.com/embed/vkrCZHNKQ9o?si=t_w_Y4YV8D1QuytS",
+        duration: 46, 
+      }
+    ]
+  },
+  {
+    id: 3,
+    title: 'Basic Safety & First Aid',
+    duration: '79',
+    total_lecture: 12,
+    completed_lecture: 7,
+    course_by: 'Gagandeep Magan',
+    details: [
+      {
+        title: 'New 2020 AHA / ILCOR CPR Guideline Updates?',
+        link: "https://www.youtube.com/embed/HeHsYKlGZPg?si=GLhcGOfHvth5IVwC",
+        duration: 11,
+      }, 
+      {
+        title: 'The Five Fears of CPR Rescue',
+        link: "https://www.youtube.com/embed/wMrDebkgDHo?si=JuVpET27hS6IJZu3",
+        duration: 5, 
+      },
+      {
+        title: 'Heart Attacks',
+        link: "https://www.youtube.com/embed/-7SDm0UmG_4?si=Ard52IL6PiXO8rbg",
+        duration: 8, 
+      },
+      {
+        title: 'Stroke',
+        link: "https://www.youtube.com/embed/s_5lSXEu2pw?si=itJWN8rr3PPZxaQH",
+        duration: 5, 
+      },
+      {
+        title: 'Adult CPR - Lay Rescuer',
+        link: "https://www.youtube.com/embed/s_5lSXEu2pw?si=f6hoV-N_teJH4Oum",
+        duration: 3, 
+      },
+      {
+        title: 'When CPR Doesnt Work',
+        link: "https://www.youtube.com/embed/If2ik9PAYzk?si=aCHAZXdrA5LfC8_F",
+        duration: 10, 
+      },
+      {
+        title: 'Conscious Adult Choking',
+        link: "https://www.youtube.com/embed/GLz5dWCEcPc?si=sIhR57BaeaPXcNdu",
+        duration: 4, 
+      },
+      {
+        title: 'Amputation',
+        link: "https://www.youtube.com/embed/6tdmwSxe4tw?si=zulrsOK1mxUftziO",
+        duration: 7,
+      },
+      {
+        title: 'Tourniquets',
+        link: "https://www.youtube.com/embed/xFVY4IdNdg0?si=ctlo9iTHrSemZxci",
+        duration: 5, 
+      },
+      {
+        title: 'Seizure',
+        link: "https://www.youtube.com/embed/keYKzRZ6Mj8?si=2NaYlMGoHXxHYm04",
+        duration: 6, 
+      },
+      {
+        title: 'How to Use an EpiPen (Latest Guidelines)',
+        link: "https://www.youtube.com/embed/bwGFLzIioA4?si=N4N8QrP0Uv59HRJr",
+        duration: 4, 
+      },
+      {
+        title: 'Special Considerations for CPR, AED and Choking',
+        link: "https://www.youtube.com/embed/d-SipwXquOE?si=tjaCsWG2bAIl4PGj",
+        duration: 11, 
+      }
+      
+    ]
+  }
 ];
