@@ -104,7 +104,8 @@ export const courses = [
     duration: '184',
     total_lecture: 4,
     completed_lecture: 3,
-    course_by: 'Gagandeep Magan',
+    course_by: 'CNA Insider',
+    thumbnail_url: "https://i.ytimg.com/vi/6Bfg9jMOV9A/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAk5uxjyQ5205kP9h091zrV0ue6vg",
     details: [
       {
         title: 'How Tough Is Singapore Prison Life?',
@@ -134,7 +135,8 @@ export const courses = [
     duration: '79',
     total_lecture: 12,
     completed_lecture: 7,
-    course_by: 'Gagandeep Magan',
+    course_by: 'ProCPR',
+    thumbnail_url: "https://i.ytimg.com/vi/HeHsYKlGZPg/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARg-IEEofzAP&rs=AOn4CLD4d1cLmRY0uvXr0JpTyMbqxyEQGw",
     details: [
       {
         title: 'New 2020 AHA / ILCOR CPR Guideline Updates?',
