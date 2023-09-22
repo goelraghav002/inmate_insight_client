@@ -10,6 +10,15 @@ const Course = () => {
   const course_details = course.details;
   const [currentLecture, setCurrentLecture] = useState(null);
 
+  const timeConvert = (n) => {
+    var num = n;
+    var hours = (num / 60);
+    var rhours = Math.floor(hours);
+    var minutes = (hours - rhours) * 60;
+    var rminutes = Math.round(minutes);
+    return rhours > 0 ? rhours + " hour " + rminutes + " minute(s)" : rminutes + " minute(s)" ;
+  }
+
   const handleLectureClick = (link) => {
     console.log(link);
     setCurrentLecture(link);
@@ -60,7 +69,7 @@ const Course = () => {
                       {course_detail.title}
                     </p>
                     <p>
-                      <strong>{course_detail.duration}</strong>
+                      <strong>{timeConvert(course_detail.duration)}</strong>
                     </p>
                   </div>
                 ))}
