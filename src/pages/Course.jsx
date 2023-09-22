@@ -11,12 +11,12 @@ const Course = () => {
   const [currentLecture, setCurrentLecture] = useState(null);
 
   const timeConvert = (n) => {
-    var num = n;
-    var hours = (num / 60);
-    var rhours = Math.floor(hours);
-    var minutes = (hours - rhours) * 60;
-    var rminutes = Math.round(minutes);
-    return rhours > 0 ? rhours + " hour " + rminutes + " minute(s)" : rminutes + " minute(s)" ;
+    let num = n;
+    let hours = (num / 60);
+    let rhours = Math.floor(hours);
+    let minutes = (hours - rhours) * 60;
+    let rminutes = Math.round(minutes);
+    return rhours > 0 ? rhours + " hour " + rminutes + " minute(s)" : rminutes + " minute(s)";
   }
 
   const handleLectureClick = (link) => {
