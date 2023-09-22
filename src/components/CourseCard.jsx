@@ -20,7 +20,7 @@ const CourseCard = ({ course }) => {
         <div className="flex text-xs w-full">
           <p className="my-1">{course.total_lecture} Lectures</p>
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <p className="my-1">{course.duration} Hours</p>
+          <p className="my-1">{course.duration} Minutes</p>
         </div>
         <p className="text-xs">
           <span>

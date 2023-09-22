@@ -38,7 +38,7 @@ const Course = () => {
             {currentLecture && (
               <div>
                 <iframe
-                  src={currentLecture}
+                  src={currentLecture.link}
                   width={840}
                   height={473}
                   title="YouTube video player"
@@ -46,6 +46,12 @@ const Course = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
                   allowFullScreen
                 ></iframe>
+
+                <div>
+                  <p>
+                    <h1 className="text-2xl m-4"><strong>{currentLecture.title}</strong></h1>
+                  </p>
+                </div>
               </div>
             )}
           </div>
@@ -60,7 +66,7 @@ const Course = () => {
                 {/* <h3 className="font-bold mb-6 text-lg">Useful Links</h3> */}
                 {course_details.map((course_detail, index) => (
                   <div
-                    onClick={() => handleLectureClick(course_detail.link)}
+                    onClick={() => handleLectureClick(course_detail)}
                     className="flex flex-col my-4 py-3 px-5 rounded-lg bg-slate-100 cursor-pointer"
                     key={index}
                   >
