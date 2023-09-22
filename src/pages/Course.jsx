@@ -3,12 +3,17 @@ import Sidebar from '../components/Sidebar'
 import Navbar from '../components/Navbar'
 import { courses } from '../constants'
 import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 
 const Course = () => {
   const course = courses[useParams().id - 1];
   const course_details = course.details;
+  const [currentLecture, setCurrentLecture] = useState(null);
 
-  console.log(course_details)
+  const handleLectureClick = (link) => {
+    console.log(link)
+    setCurrentLecture(link)
+  }
 
   return (
     <div className="relative z-0 bg-gradient-to-l from-stone-200 via-lime-100 to-stone-200  min-h-screen p-4 flex transition-all duration-300">
@@ -22,7 +27,7 @@ const Course = () => {
         <div className="flex justify-between py-4">
 
           <div className=''>
-            {/* <iframe src="https://www.youtube.com/embed/ThsdqPck-LA?si=Ou1Z26nopozDoTvZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowFullScreen></iframe> */}
+            {currentLecture && <iframe src={currentLecture} width={840} height={473} title="YouTube video player" className='rounded-lg' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowFullScreen></iframe>}
           </div>
 
           <div className=''>
@@ -34,8 +39,9 @@ const Course = () => {
               <div className="w-full mt-3">
                 {/* <h3 className="font-bold mb-6 text-lg">Useful Links</h3> */}
                 {course_details.map((course_detail, index) => (
-                  <div className="flex justify-start items-center my-4 py-3 px-5 rounded-lg bg-slate-100" key={index}>
-                    <p><strong>Lecture {index+1}:</strong> {course_detail.title}</p>
+                  <div onClick={() => handleLectureClick(course_detail.link)} className="flex flex-col my-4 py-3 px-5 rounded-lg bg-slate-100 cursor-pointer" key={index}>
+                    <p><strong>Lecture {index + 1}:</strong> {course_detail.title}</p>
+                    <p><strong>{course_detail.duration}</strong></p>
                   </div>
                 ))}
               </div>
