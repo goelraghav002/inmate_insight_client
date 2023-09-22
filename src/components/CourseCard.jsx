@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const CourseCard = ({ course }) => {
   return (
-    <div className="flex flex-col w-64 h-72 bg-[#F8F8F9] rounded-xl p-4 m-4 shadow-lg">
+    <div className="flex flex-col w-64 min-h-72 bg-[#F8F8F9] rounded-xl p-4 m-4 shadow-lg">
       <div className="rounded-xl w-full h-36 flex items-center justify-center">
         <img
           src="https://i.ytimg.com/vi/_DVVNOGYtmU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDQHe5HFyk-csRHStg7kSJ38aHPfw"
