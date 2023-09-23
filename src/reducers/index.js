@@ -1,7 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
-
+console.log(window.innerWidth)
 const activeMenu_initialState = {
-    activeMenu: true
+    activeMenu: window.innerWidth < 640 ? false : true
 }
 
 
