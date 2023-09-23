@@ -32,7 +32,7 @@ export const navlinks = [
 export const courses = [
   {
     id: 1,
-    title: "Cyber Security",
+    title: "Cyber Security | Become Cyber Security Expert",
     duration: "615",
     total_lecture: 11,
     completed_lecture: 6,
@@ -100,7 +100,7 @@ export const courses = [
   },
   {
     id: 2,
-    title: 'Inside Maximum Security: Case Study: Singapore',
+    title: 'Inside Maximum Security: Case Study-Singapore',
     duration: '184',
     total_lecture: 4,
     completed_lecture: 3,
@@ -131,7 +131,7 @@ export const courses = [
   },
   {
     id: 3,
-    title: 'Basic Safety & First Aid',
+    title: 'Basic Safety & First Aid Online Course',
     duration: '79',
     total_lecture: 12,
     completed_lecture: 7,

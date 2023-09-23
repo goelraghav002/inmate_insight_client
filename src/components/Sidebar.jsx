@@ -1,6 +1,6 @@
 // import React from 'react';
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { navlinks } from "../constants";
 
 const Sidebar = () => {
@@ -14,11 +14,11 @@ const Sidebar = () => {
 			<div className="w-full mt-5">
 				<h3 className="font-bold mb-6 text-lg">Useful Links</h3>
 				{navlinks.map((link, index) => (
-					<Link key={index} to={link.link}>
+					<NavLink key={index} to={link.link}>
 						<div key={link.name} className="flex justify-start items-center gap-4 my-8 mx-2">
-							<span className="opacity-60">{link.name}</span>
+							<span className="opacity-60 font-semibold">{link.name}</span>
 						</div>
-					</Link>
+					</NavLink>
 				))}
 			</div>
 		</div>

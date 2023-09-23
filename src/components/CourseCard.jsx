@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const CourseCard = ({ course }) => {
   return (
-    <div className="flex flex-col w-64 h-96 bg-[#F8F8F9] rounded-xl p-4 m-4 shadow-lg">
+    <div className="flex flex-col w-[268px] h-[360px] bg-[#F8F8F9] rounded-xl p-4 m-4 shadow-lg">
       <div className="rounded-xl w-full h-36 flex items-center justify-center">
         <img
           src={course?.thumbnail_url}
@@ -14,7 +14,7 @@ const CourseCard = ({ course }) => {
 
       <div className="flex flex-col h-full justify-between px-2 py-2">
         <h2 className="font-bold text-2xl my-2">{course.title}</h2>
-        <div>
+        <div className="">
           <p className="text-xs">
             By: <span>{course.course_by}</span>
           </p>

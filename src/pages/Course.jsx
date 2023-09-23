@@ -49,7 +49,7 @@ const Course = () => {
 
                 <div>
                   <p>
-                    <h1 className="text-2xl m-4"><strong>{currentLecture.title}</strong></h1>
+                    <h1 className="text-3xl m-4"><strong>{currentLecture.title}</strong></h1>
                   </p>
                 </div>
               </div>
