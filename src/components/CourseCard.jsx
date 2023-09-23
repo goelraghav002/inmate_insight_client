@@ -2,6 +2,16 @@
 import PropTypes from "prop-types";
 
 const CourseCard = ({ course }) => {
+
+  const timeConvert = (n) => {
+    let num = n;
+    let hours = (num / 60);
+    let rhours = Math.floor(hours);
+    let minutes = (hours - rhours) * 60;
+    let rminutes = Math.round(minutes);
+    return rhours > 0 ? rhours + " hour " + rminutes + " minute(s)" : rminutes + " minute(s)";
+  }
+
   return (
     <div className="flex flex-col w-[268px] h-[360px] bg-[#F8F8F9] rounded-xl p-4 m-4 shadow-lg hover:shadow-[2px_1px_15px_3px_rgba(0,0,0,0.1)] hover:scale-105 transition ease-out duration-700 ">
       <div className="rounded-xl w-full h-36 flex items-center justify-center">
@@ -21,7 +31,7 @@ const CourseCard = ({ course }) => {
           <div className="flex text-xs w-full">
             <p className="my-1">{course.total_lecture} Lectures</p>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <p className="my-1">{course.duration} Minutes</p>
+            <p className="my-1">{timeConvert(course.duration)}</p>
           </div>
           <p className="text-xs">
             <span>
