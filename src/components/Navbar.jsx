@@ -8,7 +8,7 @@ const Navbar = ({title}) => {
 	const user = true;
 
 	return (
-		<nav className='flex justify-between items-center sticky bg-[#F8F8F9] px-8 py-4 rounded-2xl'>
+		<nav className='flex justify-between items-center sticky top-4 bg-[#F8F8F9] px-8 py-4 rounded-2xl'>
 			{user ? (
 				<>
 					<div className='font-bold text-2xl tracking-wide mr-4'>
@@ -25,7 +25,7 @@ const Navbar = ({title}) => {
 					</div>
 
 					<div className='flex items-center'>
-						<div className='text-xl mx-4 relative xs:flex cursor-pointer'>
+						<div className='hidden text-xl mx-4 relative sm:flex cursor-pointer'>
 							<IoMdNotificationsOutline />
 							<span className='absolute w-4 h-4 bg-red-600 -top-1 left-2 rounded-full text-[10px] flex justify-center items-center'>
 								5
