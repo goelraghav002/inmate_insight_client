@@ -9,30 +9,38 @@ import {
     member,
     camera,
   } from "./imports";
+
 import Sidebar from '../../components/Sidebar'
 import Navbar from '../../components/Navbar'
+
+const user = {
+  name: 'Akshansh',
+  cprogress: '08',
+ ccomplete: '23',
+};
+
 
 const Profile = () => {
   return (
       <div className='relative z-0 bg-gradient-to-l from-stone-200 via-lime-100 to-stone-200  min-h-screen p-4 flex transition-all duration-300'>
-          <div className='flex relative mr-4'>
+          <div className='  flex relative mr-4'>
               <Sidebar />
           </div>
 
           <div className='flex-1 flex flex-col'>
-              <Navbar />
+              <Navbar className=""/>
          
          
-              <div className="flex flex-row  msm:flex-col">
-              <div className="mx-4 my-4 rounded-lg flex flex-col w-[28rem] bg-white shadow-[0_0px_6px_3px_rgba(0,0,0,0.2)] p-8">
+              <div className="flex flex-row  mlg:flex-col">
+              <div className="mx-4 my-4 rounded-lg flex flex-col max-w-md bg-white shadow-[0_0px_6px_3px_rgba(0,0,0,0.2)] p-8">
                 {/* profile div */}
                 <div className="flex flex-col items-center">
                   {/* profile , name , pic vip */}
                   <div>
                     <img src={profile1} className="w-24 h-24 rounded-full" />
                   </div>
-                  <p className="py-2">
-            Akshansh 
+                  <p className=" cursor-default py-2">
+       {user.name}
                 
                   </p>
                   <button className=" text-white bg-amber-600 hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-1 text-center mr-2 my-2.5 dark:bg-amber-600 dark:hover:bg-amber-600 dark:focus:ring-amber-600 ">
@@ -43,13 +51,13 @@ const Profile = () => {
                 <div className="mx-6 mt-3 flex flex-row  space-x-3 justify-between">
                   <div className="flex flex-col items-center ">
                     <button className="rounded-full text-2xl w-16 h-16 bg-indigo-200 text-indigo-400 font-extrabold ">
-                     08
+                    {user.cprogress}
                     </button>
                     <p className="font-semibold">Course in progress</p>
                   </div>
                   <div className="flex flex-col items-center">
                     <button className="rounded-full text-2xl w-16 h-16 bg-green-100 text-green-400 font-extrabold ">
-                    23
+                 {user.ccomplete}
                     </button>
                     <p className="font-semibold">Course Complete</p>
                   </div>
@@ -58,8 +66,8 @@ const Profile = () => {
                 </div>
         
                 <div>
-                  <p className="font-semibold text-2xl pt-8 ">Last Achievement</p>
-                  <div className="flex flex-row justify-between flex-wrap ">
+                  <p className="  cursor-default font-semibold text-2xl pt-8 ">Last Achievement</p>
+                  <div className="space-x-2 flex flex-row justify-between flex-wrap ">
                     <div className="w-20 h-20 mt-2 ">
                       <img className="p-2 rounded-full bg-rose-100" src={crown}></img>
                     </div>
@@ -85,7 +93,7 @@ const Profile = () => {
                 <div>
                   <p className="font-semibold text-2xl py-10">Support</p>
                   <div className="flex flex-col justify-between ">
-                    <div className="flex flex-row pb-4">
+                    <div className=" cursor-pointer flex flex-row mb-4">
                       <div className="w-12 h-12 ">
                         <img
                           className=" p-2 rounded-full bg-sky-100"
@@ -95,7 +103,7 @@ const Profile = () => {
                       <p className="font-medium pl-4 self-center">Become a member</p>
                     </div>
         
-                    <div className="flex flex-row pb-4">
+                    <div className=" cursor-pointer flex flex-row ">
                       <div className="w-12 h-12 ">
                         <img
                           className="bg-indigo-200  p-2 rounded-full "
