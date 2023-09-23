@@ -10,50 +10,43 @@ import {
   camera,
 } from "./imports";
 
-import Sidebar from '../../components/Sidebar'
-import Navbar from '../../components/Navbar'
+import Sidebar from "../../components/Sidebar";
+import Navbar from "../../components/Navbar";
 import { useSelector } from "react-redux";
 
 const user = {
-  name: 'Akshansh',
-  cprogress: '08',
-  ccomplete: '23',
+  name: "Akshansh",
+  cprogress: "08",
+  ccomplete: "23",
 };
 
-
 const Profile = () => {
-  const { activeMenu } = useSelector(state => state.activeMenu);
+  const { activeMenu } = useSelector((state) => state.activeMenu);
 
   return (
-    <div className='relative z-0 bg-gradient-to-l from-stone-200 via-lime-100 to-stone-200  min-h-screen p-4 flex transition-all duration-300'>
-      <div className='  flex relative mr-4'>
-        {activeMenu && <Sidebar />}
-      </div>
+    <div className="relative z-0 bg-gradient-to-l from-stone-200 via-lime-100 to-stone-200  min-h-screen p-4 flex transition-all duration-300">
+      <div className="  flex relative mr-4">{activeMenu && <Sidebar />}</div>
 
-      <div className='flex-1 flex flex-col'>
+      <div className="flex-1 flex flex-col">
         <Navbar title="Profile" className="" />
 
-
-        <div className="flex flex-col lg:flex-row">
-          <div className="mx-4 my-4 rounded-lg flex flex-col max-w-md bg-white shadow-[0_0px_6px_3px_rgba(0,0,0,0.2)] p-8">
+        <div className="flex w-full flex-col md:flex-row">
+          <div className="items-strech  mr-5  md:mr-6 my-4 rounded-lg flex flex-col bg-white shadow-[0_0px_6px_3px_rgba(0,0,0,0.2)] p-8">
             {/* profile div */}
             <div className="flex flex-col items-center">
               {/* profile , name , pic vip */}
               <div>
                 <img src={profile1} className="w-24 h-24 rounded-full" />
               </div>
-              <p className=" cursor-default py-2">
-                {user.name}
-
-              </p>
+              <p className=" cursor-default py-2">{user.name}</p>
               <button className=" text-white bg-amber-600 hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-1 text-center mr-2 my-2.5 dark:bg-amber-600 dark:hover:bg-amber-600 dark:focus:ring-amber-600 ">
                 VIP
               </button>
             </div>
 
-            <div className="mx-6 mt-3 flex flex-row  space-x-3 justify-between">
+            <div className=" justify-around    mx-6 mt-3 flex flex-row  space-x-3 lg:justify-between">
               <div className="flex flex-col items-center ">
-                <button className="rounded-full text-2xl w-16 h-16 bg-indigo-200 text-indigo-400 font-extrabold ">
+                <button className=" rounded-full text-2xl w-16 h-16 bg-indigo-200 text-indigo-400 font-extrabold ">
                   {user.cprogress}
                 </button>
                 <p className="font-semibold">Course in progress</p>
@@ -69,10 +62,15 @@ const Profile = () => {
             </div>
 
             <div>
-              <p className="  cursor-default font-semibold text-2xl pt-8 ">Last Achievement</p>
-              <div className="space-x-2 flex flex-row justify-between flex-wrap ">
+              <p className="  cursor-default font-semibold text-2xl pt-8 ">
+                Last Achievement
+              </p>
+              <div className="space-x-2 flex flex-row justify-around flex-wrap ">
                 <div className="w-20 h-20 mt-2 ">
-                  <img className="p-2 rounded-full bg-rose-100" src={crown}></img>
+                  <img
+                    className="p-2 rounded-full bg-rose-100"
+                    src={crown}
+                  ></img>
                 </div>
                 <div className="w-20 h-20 mt-2 rounded-full bg-rose-100 ">
                   <img className="mx-2 px-1 w-16 p-2 " src={trophy}></img>
@@ -103,7 +101,9 @@ const Profile = () => {
                       src={member}
                     ></img>
                   </div>
-                  <p className="font-medium pl-4 self-center">Become a member</p>
+                  <p className="font-medium pl-4 self-center">
+                    Become a member
+                  </p>
                 </div>
 
                 <div className=" cursor-pointer flex flex-row ">
@@ -125,14 +125,19 @@ const Profile = () => {
             </div>
           </div>
           <form className="flex-auto mr-6">
-            <div className="mx-4 my-4 max-w-5xl sm:w-full rounded-lg flex flex-col min-w-min bg-white shadow-[0_0px_6px_3px_rgba(0,0,0,0.2)] p-8">
+            <div className="   my-4 max-w-5xl md:w-full  lg:ml-4  rounded-lg flex flex-col  bg-white shadow-[0_0px_6px_3px_rgba(0,0,0,0.2)] p-8">
               <div className="mb-10">
                 <p className="font-semibold text-xl ">Profile Setting</p>
               </div>
               <div className=" relative w-[6.8rem] h-[6.9rem] ">
-
-                <img src={profile1} className="w-24 h-24  rounded-full absolute" />
-                <img src={camera} className="   border-none  p-1 rounded-full bottom-0 right-2 w-12 cursor-pointer absolute " />
+                <img
+                  src={profile1}
+                  className="w-24 h-24  rounded-full absolute"
+                />
+                <img
+                  src={camera}
+                  className="   border-none  p-1 rounded-full bottom-0 right-2 w-12 cursor-pointer absolute "
+                />
               </div>
               <div className="space-y-6 mt-4 flex flex-col">
                 <div className="flex   flex-row  space-x-3 justify-between">
@@ -268,7 +273,7 @@ const Profile = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;
