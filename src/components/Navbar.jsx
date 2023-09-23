@@ -18,7 +18,7 @@ const Navbar = ({title}) => {
 	};
 
 	return (
-		<nav className='flex justify-between items-center sticky top-4 bg-[#F8F8F9] px-8 py-4 rounded-2xl'>
+		<nav className='flex justify-between items-center sticky z-10 bg-[#F8F8F9] px-8 py-4 rounded-2xl'>
 			{user ? (
 				<>
 					<button onClick={() => setActiveMenu((prev) => !prev)}>
