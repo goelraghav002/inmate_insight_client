@@ -4,8 +4,10 @@ import Navbar from "../components/Navbar";
 import { courses } from "../constants";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Course = () => {
+  const { activeMenu } = useSelector(state => state.activeMenu);
   const course = courses[useParams().id - 1];
   const course_details = course.details;
   const [currentLecture, setCurrentLecture] = useState(null);
@@ -27,7 +29,7 @@ const Course = () => {
   return (
     <div className="relative z-0 bg-gradient-to-l from-stone-200 via-lime-100 to-stone-200  min-h-screen p-4 flex transition-all duration-300">
       <div className="hidden sm:flex relative mr-4">
-        <Sidebar />
+        {activeMenu && <Sidebar />}
       </div>
 
       <div className="flex-1 flex flex-col">

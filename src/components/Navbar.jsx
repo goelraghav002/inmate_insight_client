@@ -2,15 +2,28 @@
 // import { avatar2, search } from '../assets';
 import PropTypes from 'prop-types'
 import { IoMdNotificationsOutline } from 'react-icons/io';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({title}) => {
 	const user = true;
 
+	const dispatch = useDispatch();
+	// const { activeMenu } = useSelector((state) => state.activeMenu);
+
+	const setActiveMenu = () => {
+		dispatch({
+			type: 'setActiveMenu',
+		});
+	};
+
 	return (
 		<nav className='flex justify-between items-center sticky top-4 bg-[#F8F8F9] px-8 py-4 rounded-2xl'>
 			{user ? (
 				<>
+					<button onClick={() => setActiveMenu((prev) => !prev)}>
+						Menu
+					</button>
 					<div className='font-bold text-2xl tracking-wide mr-4'>
 						{title ? title : "Dashboard"}
 					</div>
