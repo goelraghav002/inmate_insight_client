@@ -18,14 +18,18 @@ export const navlinks = [
     imgUrl: dashboard,
     link: "/resources",
     onclick: "",
-    disabled: true,
+  },
+  {
+    name: "Profile",
+    imgUrl: dashboard,
+    link: "/profile",
+    onclick: "",
   },
   {
     name: "Chat",
     imgUrl: withdraw,
     link: "/chat",
     onclick: "",
-    disabled: true,
   },
 ];
 
