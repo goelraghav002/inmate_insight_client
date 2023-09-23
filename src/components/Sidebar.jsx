@@ -5,7 +5,7 @@ import { navlinks } from "../constants";
 
 const Sidebar = () => {
 	return (
-		<div className='flex items-center flex-col sticky p-8 bg-[#F8F8F9] h-[95vh] rounded-3xl w-56 lg:w-80 md:w-64 top-4'>
+		<div className='hidden sm:flex items-center flex-col sticky p-8 bg-[#F8F8F9] h-[95vh] rounded-3xl w-56 lg:w-80 md:w-64 top-4'>
 			<div className='font-bold text-3xl m-2 tracking-wide'>
 				<h2>Inmate Insight</h2>
 			</div>

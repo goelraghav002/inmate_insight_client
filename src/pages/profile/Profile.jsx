@@ -28,7 +28,7 @@ const Profile = () => {
           </div>
 
           <div className='flex-1 flex flex-col'>
-              <Navbar className=""/>
+              <Navbar title="Profile" className=""/>
          
          
               <div className="flex flex-row  mlg:flex-col">
