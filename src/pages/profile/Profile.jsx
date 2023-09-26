@@ -24,14 +24,14 @@ const Profile = () => {
   const { activeMenu } = useSelector((state) => state.activeMenu);
 
   return (
-    <div className="relative z-0 bg-gradient-to-l from-stone-200 via-lime-100 to-stone-200  min-h-screen p-4 flex transition-all duration-300">
+    <div className="max-w-screen relative z-0 bg-gradient-to-l from-stone-200 via-lime-100 to-stone-200  min-h-screen p-4 flex transition-all duration-300">
       <div className="  flex relative mr-4">{activeMenu && <Sidebar />}</div>
 
       <div className="flex-1 flex flex-col">
-        <Navbar title="Profile" className="" />
+        <Navbar title="Profile" className="md:justify-center" />
 
-        <div className="flex w-full flex-col md:flex-row">
-          <div className="items-strech  mr-5  md:mr-6 my-4 rounded-lg flex flex-col bg-white shadow-[0_0px_6px_3px_rgba(0,0,0,0.2)] p-8">
+        <div className="flex  max-full flex-col mt-5 md:flex-row ">
+          <div className="items-strech  md:mr-5  p-4 rounded-lg flex flex-col bg-white shadow-[0_0px_6px_3px_rgba(0,0,0,0.2)] md:p-6">
             {/* profile div */}
             <div className="flex flex-col items-center">
               {/* profile , name , pic vip */}
@@ -44,15 +44,15 @@ const Profile = () => {
               </button>
             </div>
 
-            <div className=" justify-around    mx-6 mt-3 flex flex-row  space-x-3 lg:justify-between">
+            <div className=" justify-around    md:mx-6 mt-3 flex flex-row  space-x-3 lg:justify-between">
               <div className="flex flex-col items-center ">
-                <button className=" rounded-full text-2xl w-16 h-16 bg-indigo-200 text-indigo-400 font-extrabold ">
+                <button className=" rounded-full text-2xl md:w-16 md:h-16 bg-indigo-200 text-indigo-400 font-extrabold ">
                   {user.cprogress}
                 </button>
                 <p className="font-semibold">Course in progress</p>
               </div>
               <div className="flex flex-col items-center">
-                <button className="rounded-full text-2xl w-16 h-16 bg-green-100 text-green-400 font-extrabold ">
+                <button className="rounded-full text-2xl md:w-16 md:h-16 bg-green-100 text-green-400 font-extrabold ">
                   {user.ccomplete}
                 </button>
                 <p className="font-semibold">Course Complete</p>
@@ -62,26 +62,26 @@ const Profile = () => {
             </div>
 
             <div>
-              <p className="  cursor-default font-semibold text-2xl pt-8 ">
+              <p className="  cursor-default font-semibold  text-l md:text-2xl pt-8 ">
                 Last Achievement
               </p>
               <div className="space-x-2 flex flex-row justify-around flex-wrap ">
-                <div className="w-20 h-20 mt-2 ">
+                <div className="   mt-2 ">
                   <img
-                    className="p-2 rounded-full bg-rose-100"
+                    className="p-2 h-20 rounded-full bg-rose-100"
                     src={crown}
                   ></img>
                 </div>
-                <div className="w-20 h-20 mt-2 rounded-full bg-rose-100 ">
+                <div className="mt-2 rounded-full bg-rose-100 ">
                   <img className="mx-2 px-1 w-16 p-2 " src={trophy}></img>
                 </div>
-                <div className="w-20 mt-2 h-20 ">
+                <div className="mt-2  ">
                   <img
                     className="w-20 h-20 p-2 rounded-full bg-rose-100"
                     src={flag}
                   ></img>
                 </div>
-                <div className="w-20 mt-2 h-20 ">
+                <div className="\ mt-2  ">
                   <img
                     className="w-20 h-20 p-2 rounded-full bg-rose-100"
                     src={medal}
@@ -92,12 +92,12 @@ const Profile = () => {
             </div>
 
             <div>
-              <p className="font-semibold text-2xl py-10">Support</p>
+              <p className="font-semibold text-2xl py-5">Support</p>
               <div className="flex flex-col justify-between ">
                 <div className=" cursor-pointer flex flex-row mb-4">
-                  <div className="w-12 h-12 ">
+                  <div className="">
                     <img
-                      className=" p-2 rounded-full bg-sky-100"
+                      className=" w-12 h-12 p-2 rounded-full bg-sky-100"
                       src={member}
                     ></img>
                   </div>
@@ -107,9 +107,9 @@ const Profile = () => {
                 </div>
 
                 <div className=" cursor-pointer flex flex-row ">
-                  <div className="w-12 h-12 ">
+                  <div className=" ">
                     <img
-                      className="bg-indigo-200  p-2 rounded-full "
+                      className=" w-12 h-12 bg-indigo-200  p-2 rounded-full "
                       src={support}
                     ></img>
                   </div>
@@ -124,8 +124,8 @@ const Profile = () => {
               </div>
             </div>
           </div>
-          <form className="flex-auto mr-6">
-            <div className="   my-4 max-w-5xl md:w-full  lg:ml-4  rounded-lg flex flex-col  bg-white shadow-[0_0px_6px_3px_rgba(0,0,0,0.2)] p-8">
+          <form className="flex-auto md:mr-6">
+            <div className=" my-4 md:my-0 h-full max-w-5xl md:w-full  lg:ml-4  rounded-lg flex flex-col p-4 bg-white shadow-[0_0px_6px_3px_rgba(0,0,0,0.2)] ">
               <div className="mb-10">
                 <p className="font-semibold text-xl ">Profile Setting</p>
               </div>
@@ -139,8 +139,8 @@ const Profile = () => {
                   className="   border-none  p-1 rounded-full bottom-0 right-2 w-12 cursor-pointer absolute "
                 />
               </div>
-              <div className="space-y-6 mt-4 flex flex-col">
-                <div className="flex   flex-row  space-x-3 justify-between">
+              <div className="md:space-y-6  space-y-2 mt-4 flex flex-col">
+                <div className="flex  flex-wrap flex-row  space-x-0 justify-between">
                   <div className=" w-1/2  flex flex-col rounded-lg border border-slate-300 ">
                     <label
                       className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
@@ -187,7 +187,7 @@ const Profile = () => {
                   />
                 </div>
 
-                <div className="flex flex-row  space-x-3 justify-between">
+                <div className="flex  flex-wrap flex-row  space-x-0 justify-between">
                   <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
                     <label
                       className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
@@ -218,7 +218,7 @@ const Profile = () => {
                     />
                   </div>
                 </div>
-                <div className="flex flex-row  space-x-3 justify-between">
+                <div className="flex  flex-wrap flex-row  space-x-0 justify-between">
                   <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
                     <label
                       className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
@@ -250,16 +250,16 @@ const Profile = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-8  w-full sapce-x-10  flex flex-row   justify-between">
+              <div className="mt-8  w-full   flex  flex-row   justify-between">
                 <button
-                  className="w-1/2 mr-[20px] py-3 text-white font-semibold bg-[#4ec490] transition-shadow rounded-lg px-6 hover:shadow-[4px_6px_7px_4px_rgba(78,196,144,0.14)]"
+                  className="w-1/2 py-3 text-white font-semibold bg-[#4ec490] transition-shadow rounded-lg hover:shadow-[4px_6px_7px_4px_rgba(78,196,144,0.14)]"
                   type="submit"
                   id="save"
                 >
                   Save Profile
                 </button>
                 <button
-                  className=" w-1/2 font-semibold border-green-400 text-green-400 border-[1.6px] rounded-lg py-1 px-6"
+                  className=" w-1/2 font-semibold border-green-400 text-green-400 border-[1.6px] rounded-lg py-1 "
                   type="reset"
                   id="cancel"
                 >
