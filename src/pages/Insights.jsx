@@ -14,7 +14,7 @@ const Insights = () => {
             </div>
 
             <div className='flex-1 flex flex-col'>
-                <Navbar />
+                <Navbar title="Insights" />
                 <div className='flex flex-col items-center rounded-lg'>
                     <h1 className='text-5xl mt-14 m-5 font-bold'>Insights</h1>
 
