@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Home from './pages/Home'
 import Courses from './pages/Courses'
 import Course from './pages/Course'
 import Profile from './pages/profile/Profile'
 import PastData from './pages/PastData'
+import Home from './pages/home/Home'
 
 function App() {
   return (
