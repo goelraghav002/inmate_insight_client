@@ -1,4 +1,4 @@
-import { analytics, dashboard, withdraw } from "../assets";
+import { analytics, dashboard } from "../assets";
 
 export const navlinks = [
   {
@@ -8,35 +8,35 @@ export const navlinks = [
     link: "/",
   },
   {
-    name: "Past Data",
-    imgUrl: dashboard,
-    onclick: "",
-    link: "/past-data",
-  },
-  {
     name: "Courses",
     imgUrl: analytics,
     onclick: "",
     link: "/courses",
   },
   {
-    name: "Resources",
+    name: "Past Data",
     imgUrl: dashboard,
-    link: "/resources",
     onclick: "",
+    link: "/past-data",
   },
+  // {
+  //   name: "Resources",
+  //   imgUrl: dashboard,
+  //   link: "/resources",
+  //   onclick: "",
+  // },
   {
     name: "Profile",
     imgUrl: dashboard,
     link: "/profile",
     onclick: "",
   },
-  {
-    name: "Chat",
-    imgUrl: withdraw,
-    link: "/chat",
-    onclick: "",
-  },
+  // {
+  //   name: "Chat",
+  //   imgUrl: withdraw,
+  //   link: "/chat",
+  //   onclick: "",
+  // },
 ];
 
 export const courses = [

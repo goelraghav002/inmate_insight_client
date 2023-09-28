@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
-import { illness_orissa, illness_state, training_delhi, training_state } from '../assets/graph';
+import { illness_orissa, illness_state, recidivism, training_delhi, training_state } from '../assets/graph';
 import InsightCard from '../components/InsightCard';
 
 const PastData = () => {
@@ -23,6 +23,7 @@ const PastData = () => {
                         <InsightCard graph={training_delhi} title="Officials Trained in Delhi" />
                         <InsightCard graph={illness_state} title="Mentally Ill Patients" />
                         <InsightCard graph={illness_orissa} title="Mentally Ill Patients in Orissa" />
+                        <InsightCard graph={recidivism} title="Recidivism in 2012" />
                     </div>
                 </div>
             </div>
