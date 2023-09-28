@@ -42,22 +42,6 @@ const Home = () => {
               ))}
             </div>
           </div>
-
-          <div className="mx-10">
-            <h3 className="mt-10 text-2xl font-bold">INSIGHTS</h3>
-            <div className="insight_content my-2 transition duration-700 ease-out hover:scale-105  bg-white  rounded-lg shadow-[0_0px_6px_3px_rgba(0,0,0,0.2)] ">
-              <p className="mx-4 ">
-                Mental health work with adults in contact with criminal justice
-                system is not new. It is therefore surprising that bespoke
-                mental health training for the range of practitioners and
-                clinical problems is rare and piecemeal. Both the patterns of
-                morbidity, with high rates of comorbidity and the multi-agency
-                contexts in which mental health care is delivered make the
-                acquisition and application of mental health skills and
-                knowledge skills important.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -46,13 +46,13 @@ const Profile = () => {
 
             <div className=" justify-around    md:mx-6 mt-3 flex flex-row  space-x-3 lg:justify-between">
               <div className="flex flex-col items-center ">
-                <button className=" rounded-full text-2xl md:w-16 md:h-16 bg-indigo-200 text-indigo-400 font-extrabold ">
+                <button className=" rounded-full text-2xl  w-12 h-12 md:w-16 md:h-16 bg-indigo-200 text-indigo-400 font-extrabold ">
                   {user.cprogress}
                 </button>
                 <p className="font-semibold">Course in progress</p>
               </div>
               <div className="flex flex-col items-center">
-                <button className="rounded-full text-2xl md:w-16 md:h-16 bg-green-100 text-green-400 font-extrabold ">
+                <button className="rounded-full text-2xl w-12 h-12  md:w-16 md:h-16 bg-green-100 text-green-400 font-extrabold ">
                   {user.ccomplete}
                 </button>
                 <p className="font-semibold">Course Complete</p>
