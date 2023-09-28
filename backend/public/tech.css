@@ -1,0 +1,18 @@
+img {
+  cursor: pointer !important;
+}
+
+h2 {
+  font-size: 28px !important;
+  font-style: italic !important;
+  color: midnightblue !important;
+  margin-top: 50px !important;
+}
+
+.col-md-2 {
+  cursor: pointer !important;
+}
+
+a {
+  text-decoration: none;
+}

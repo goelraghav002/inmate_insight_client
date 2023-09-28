@@ -1,0 +1,14 @@
+.wrapper {
+  border: 6px solid rgb(111, 33, 220) !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: darkgreen !important;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: "Times New Roman", Times, serif !important;
+  font-weight: 800 !important;
+}
