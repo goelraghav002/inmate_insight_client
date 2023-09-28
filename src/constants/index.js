@@ -14,10 +14,10 @@ export const navlinks = [
     link: "/courses",
   },
   {
-    name: "Past Data",
+    name: "Insights",
     imgUrl: dashboard,
     onclick: "",
-    link: "/past-data",
+    link: "/insights",
   },
   // {
   //   name: "Resources",

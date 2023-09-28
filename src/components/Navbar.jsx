@@ -43,7 +43,7 @@ const Navbar = ({ title }) => {
               </span>
             </div>
             <div className="xs:flex justify-center items-center mx-4 cursor-pointer">
-              <span className="text-[14px] m-0 p-0">Akshansh</span>
+              <Link to="/profile"><button className="text-[14px] m-0 px-6 py-2 rounded-full bg-slate-200">Akshansh</button></Link>
               &nbsp;&nbsp;
               {/* <img src={avatar2} width='30px' /> */}
             </div>

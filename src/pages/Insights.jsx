@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import { illness_orissa, illness_state, recidivism, training_delhi, training_state } from '../assets/graph';
 import InsightCard from '../components/InsightCard';
 
-const PastData = () => {
+const Insights = () => {
     const { activeMenu } = useSelector(state => state.activeMenu);
 
     return (
@@ -16,7 +16,7 @@ const PastData = () => {
             <div className='flex-1 flex flex-col'>
                 <Navbar />
                 <div className='flex flex-col items-center rounded-lg'>
-                    <h1 className='text-5xl mt-14 m-5 font-bold'>Past Data</h1>
+                    <h1 className='text-5xl mt-14 m-5 font-bold'>Insights</h1>
 
                     <div className='flex flex-wrap justify-center'>
                         <InsightCard graph={training_state} title="Total Officials Trained" />
@@ -31,4 +31,4 @@ const PastData = () => {
     );
 }
 
-export default PastData
+export default Insights
