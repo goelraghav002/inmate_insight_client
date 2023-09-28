@@ -1,9 +1,10 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import Home from "./pages/home/Home";
-import Courses from "./pages/Courses";
-import Course from "./pages/Course";
-import Profile from "./pages/profile/Profile";
+import { Route, Routes } from 'react-router-dom'
+import './App.css'
+import Home from './pages/Home'
+import Courses from './pages/Courses'
+import Course from './pages/Course'
+import Profile from './pages/profile/Profile'
+import PastData from './pages/PastData'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/courses" element={<Courses />} />
       <Route path="/courses/:id" element={<Course />} />
       <Route path="/resources" element={<Home />} />
+      <Route path="/past-data" element={<PastData />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/chat" element={<Home />} />
     </Routes>

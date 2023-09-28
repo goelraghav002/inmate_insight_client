@@ -8,6 +8,12 @@ export const navlinks = [
     link: "/",
   },
   {
+    name: "Past Data",
+    imgUrl: dashboard,
+    onclick: "",
+    link: "/past-data",
+  },
+  {
     name: "Courses",
     imgUrl: analytics,
     onclick: "",
