@@ -159,15 +159,15 @@ const Profile = () => {
                   <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
                     <label
                       className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
-                      htmlFor="email"
+                      htmlFor="staff_id"
                     >
-                      Email-address
+                      Staff-ID
                     </label>
                     <input
                       className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                      id="email"
-                      type="email"
-                      placeholder="Email"
+                      id="staff_if"
+                      type="number"
+                      placeholder="Staff-ID"
                     />
                   </div>
                 </div>
@@ -175,19 +175,33 @@ const Profile = () => {
                 <div className="flex flex-col rounded-lg border border-slate-300 ">
                   <label
                     className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
-                    htmlFor="Address"
+                    htmlFor="email"
                   >
-                    Address
+                   Email
                   </label>
                   <input
                     className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="Address"
-                    type="text"
-                    placeholder="Address"
+                    id="email"
+                    type="email"
+                    placeholder="Email"
                   />
                 </div>
 
                 <div className="flex  flex-wrap flex-row  space-x-0 justify-between">
+                <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
+                    <label
+                      className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
+                      htmlFor="address"
+                    >
+                  Address
+                    </label>
+                    <input
+                      className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                      id="address"
+                      type="text"
+                      placeholder="Address"
+                    />
+                  </div>
                   <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
                     <label
                       className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
@@ -203,36 +217,24 @@ const Profile = () => {
                     />
                   </div>
 
-                  <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
-                    <label
-                      className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
-                      htmlFor="state"
-                    >
-                      State/Province
-                    </label>
-                    <input
-                      className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                      id="state"
-                      type="text"
-                      placeholder="state"
-                    />
-                  </div>
+                 
                 </div>
                 <div className="flex  flex-wrap flex-row  space-x-0 justify-between">
-                  <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
-                    <label
-                      className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
-                      htmlFor="zip_code"
-                    >
-                      Zip-Code
-                    </label>
-                    <input
-                      className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                      id="zip_code"
-                      type="text"
-                      placeholder="zip-code"
-                    />
-                  </div>
+                <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
+                <label
+                  className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
+                  htmlFor="state"
+                >
+                  State/Province
+                </label>
+                <input
+                  className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  id="state"
+                  type="text"
+                  placeholder="state"
+                />
+              </div>
+                  
 
                   <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
                     <label
@@ -244,7 +246,7 @@ const Profile = () => {
                     <input
                       className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                       id="phone_number"
-                      type="number"
+                      type="text"
                       placeholder="phone"
                     />
                   </div>
