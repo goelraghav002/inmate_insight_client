@@ -7,6 +7,7 @@ import { CourseCard, courses } from "./imports";
 
 import { Link } from "react-router-dom";
 const Home = () => {
+  const auth = useSelector((state) => state.auth);
   const { activeMenu } = useSelector((state) => state.activeMenu);
 
   return (
@@ -20,7 +21,7 @@ const Home = () => {
           <div>
             <h1 className=" mt-10 ml-10 text-2xl font-bold">
               <span>Welcome Back!</span> <br />{" "}
-              <span className="text-4xl">AKSHANSH</span>
+              <span className="text-4xl">{auth.user.name}</span>
             </h1>
           </div>
 

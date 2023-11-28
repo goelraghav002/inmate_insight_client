@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-
-import { activeMenuReducer } from "../reducers";
+import { activeMenuReducer, loginReducer, signupReducer } from "../reduers";
 
 const store = configureStore({
-    reducer: {
-        activeMenu: activeMenuReducer
-    }
-})
+  reducer: {
+    activeMenu: activeMenuReducer,
+    auth: loginReducer,
+    user: signupReducer,
+  },
+});
 
 export default store;

@@ -14,13 +14,17 @@ import Sidebar from "../../components/Sidebar";
 import Navbar from "../../components/Navbar";
 import { useSelector } from "react-redux";
 
-const user = {
-  name: "Akshansh",
-  cprogress: "08",
-  ccomplete: "23",
-};
+// const user = {
+//   name: "Akshansh",
+//   cprogress: "08",
+//   ccomplete: "23",
+// };
 
 const Profile = () => {
+  const auth = useSelector((state) => state.auth);
+
+  const user = auth.user;
+
   const { activeMenu } = useSelector((state) => state.activeMenu);
 
   return (
@@ -38,7 +42,7 @@ const Profile = () => {
               <div>
                 <img src={profile1} className="w-24 h-24 rounded-full" />
               </div>
-              <p className=" cursor-default py-2">{user.name}</p>
+              <p className=" cursor-default py-2">{user?.name}</p>
               <button className=" text-white bg-amber-600 hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-1 text-center mr-2 my-2.5 dark:bg-amber-600 dark:hover:bg-amber-600 dark:focus:ring-amber-600 ">
                 VIP
               </button>
@@ -47,13 +51,13 @@ const Profile = () => {
             <div className=" justify-around    md:mx-6 mt-3 flex flex-row  space-x-3 lg:justify-between">
               <div className="flex flex-col items-center ">
                 <button className=" rounded-full text-2xl  w-12 h-12 md:w-16 md:h-16 bg-indigo-200 text-indigo-400 font-extrabold ">
-                  {user.cprogress}
+                  {user?.cprogress}
                 </button>
                 <p className="font-semibold">Course in progress</p>
               </div>
               <div className="flex flex-col items-center">
                 <button className="rounded-full text-2xl w-12 h-12  md:w-16 md:h-16 bg-green-100 text-green-400 font-extrabold ">
-                  {user.ccomplete}
+                  {user?.ccomplete}
                 </button>
                 <p className="font-semibold">Course Complete</p>
               </div>
@@ -148,12 +152,9 @@ const Profile = () => {
                     >
                       Full Name
                     </label>
-                    <input
-                      className=" font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                      id="full_name"
-                      type="text"
-                      placeholder="Name"
-                    />
+                    <div className=" font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                      {user?.name}
+                    </div>
                   </div>
 
                   <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
@@ -163,79 +164,23 @@ const Profile = () => {
                     >
                       Staff-ID
                     </label>
-                    <input
-                      className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                      id="staff_if"
-                      type="number"
-                      placeholder="Staff-ID"
-                    />
+                    <div className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                      {user?._id}
+                    </div>
                   </div>
-                </div>
-
-                <div className="flex flex-col rounded-lg border border-slate-300 ">
-                  <label
-                    className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
-                    htmlFor="email"
-                  >
-                   Email
-                  </label>
-                  <input
-                    className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="email"
-                    type="email"
-                    placeholder="Email"
-                  />
-                </div>
-
-                <div className="flex  flex-wrap flex-row  space-x-0 justify-between">
-                <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
-                    <label
-                      className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
-                      htmlFor="address"
-                    >
-                  Address
-                    </label>
-                    <input
-                      className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                      id="address"
-                      type="text"
-                      placeholder="Address"
-                    />
-                  </div>
-                  <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
-                    <label
-                      className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
-                      htmlFor="city"
-                    >
-                      City
-                    </label>
-                    <input
-                      className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                      id="city"
-                      type="text"
-                      placeholder="city"
-                    />
-                  </div>
-
-                 
                 </div>
                 <div className="flex  flex-wrap flex-row  space-x-0 justify-between">
-                <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
-                <label
-                  className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
-                  htmlFor="state"
-                >
-                  State/Province
-                </label>
-                <input
-                  className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                  id="state"
-                  type="text"
-                  placeholder="state"
-                />
-              </div>
-                  
-
+                  <div className="w-1/2 flex flex-col rounded-lg border border-slate-300 ">
+                    <label
+                      className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
+                      htmlFor="email"
+                    >
+                      Email
+                    </label>
+                    <div className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                      {user?.email}
+                    </div>
+                  </div>
                   <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
                     <label
                       className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
@@ -243,16 +188,49 @@ const Profile = () => {
                     >
                       Phone Number
                     </label>
-                    <input
+                    <div
                       className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                      id="phone_number"
-                      type="text"
-                      placeholder="phone"
-                    />
+                    >{user?.contactNumber}</div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col rounded-lg border border-slate-300 ">
+                  <label
+                    className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
+                    htmlFor="address"
+                  >
+                    Address
+                  </label>
+                  <div
+                    className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  >{user?.address}</div>
+                </div>
+                <div className="flex  flex-wrap flex-row  space-x-0 justify-between">
+                  <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
+                    <label
+                      className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
+                      htmlFor="city"
+                    >
+                      City
+                    </label>
+                    <div className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                      {user?.city}
+                    </div>
+                  </div>
+                  <div className="w-1/2  flex flex-col rounded-lg border border-slate-300 ">
+                    <label
+                      className=" pl-4 uppercase tracking-wide text-gray-400 text-xs font-semibold my-2.5"
+                      htmlFor="state"
+                    >
+                      State/Province
+                    </label>
+                    <div
+                      className="font-semibold placeholder-black appearance-none border-none rounded  px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    >{user?.state}</div>
                   </div>
                 </div>
               </div>
-              <div className="mt-8  w-full   flex  flex-row   justify-between">
+              {/* <div className="mt-8  w-full   flex  flex-row   justify-between">
                 <button
                   className="w-1/2 py-3 text-white font-semibold bg-[#4ec490] transition-shadow rounded-lg hover:shadow-[4px_6px_7px_4px_rgba(78,196,144,0.14)]"
                   type="submit"
@@ -267,7 +245,7 @@ const Profile = () => {
                 >
                   Cancel
                 </button>
-              </div>
+              </div> */}
 
               {/* Profile Setting */}
             </div>

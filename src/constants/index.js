@@ -6,37 +6,39 @@ export const navlinks = [
     imgUrl: dashboard,
     onclick: "",
     link: "/",
+    admin: false
   },
   {
     name: "Courses",
     imgUrl: analytics,
     onclick: "",
     link: "/courses",
+    admin: false
   },
   {
     name: "Insights",
     imgUrl: dashboard,
     onclick: "",
     link: "/insights",
+    admin: false
   },
-  // {
-  //   name: "Resources",
-  //   imgUrl: dashboard,
-  //   link: "/resources",
-  //   onclick: "",
-  // },
   {
     name: "Profile",
     imgUrl: dashboard,
     link: "/profile",
     onclick: "",
+    admin: false
   },
-  // {
-  //   name: "Chat",
-  //   imgUrl: withdraw,
-  //   link: "/chat",
-  //   onclick: "",
-  // },
+];
+
+export const navlinksadmin = [
+  {
+    name: "All Staff",
+    imgUrl: dashboard,
+    link: "/all-staff",
+    onclick: "",
+    admin: true
+  }
 ];
 
 export const courses = [

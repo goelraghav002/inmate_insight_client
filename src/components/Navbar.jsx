@@ -2,14 +2,16 @@
 // import { avatar2, search } from '../assets';
 import PropTypes from "prop-types";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ title }) => {
-  const user = true;
-
+  const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  // const { activeMenu } = useSelector((state) => state.activeMenu);
+
+  // console.log(auth)
+
+  const user = auth.user;
 
   const setActiveMenu = () => {
     dispatch({
@@ -19,7 +21,7 @@ const Navbar = ({ title }) => {
 
   return (
     <nav className="flex justify-between items-center sticky z-10 bg-[#F8F8F9] px-8 py-4 rounded-2xl">
-      {user ? (
+      {auth.authenticate ? (
         <>
           <button onClick={() => setActiveMenu((prev) => !prev)}>Menu</button>
           <div className="font-bold text-2xl tracking-wide mr-4">
@@ -43,7 +45,11 @@ const Navbar = ({ title }) => {
               </span>
             </div>
             <div className="xs:flex justify-center items-center mx-4 cursor-pointer">
-              <Link to="/profile"><button className="text-[14px] m-0 px-6 py-2 rounded-full bg-slate-200">Akshansh</button></Link>
+              <Link to="/profile">
+                <button className="text-[14px] m-0 px-6 py-2 rounded-full bg-slate-200">
+                  {user.name}
+                </button>
+              </Link>
               &nbsp;&nbsp;
               {/* <img src={avatar2} width='30px' /> */}
             </div>
@@ -52,7 +58,7 @@ const Navbar = ({ title }) => {
       ) : (
         <>
           <div className="font-bold text-3xl m-1 tracking-wide">
-            <h2>FinSense</h2>
+            <h2>Inmate Insight</h2>
           </div>
           <div className="flex justify-between items-center gap-8">
             <Link
@@ -60,12 +66,6 @@ const Navbar = ({ title }) => {
               className="p-2 px-6 rounded-full bg-[#5C8D7B] font-bold tracking-wide text-sm"
             >
               Login
-            </Link>
-            <Link
-              to="/register"
-              className="p-2 px-6 rounded-full bg-[#5C8D7B] font-bold tracking-wide text-sm"
-            >
-              Register
             </Link>
           </div>
         </>
