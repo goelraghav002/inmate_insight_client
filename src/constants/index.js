@@ -6,28 +6,28 @@ export const navlinks = [
     imgUrl: dashboard,
     onclick: "",
     link: "/",
-    admin: false
+    admin: false,
   },
   {
     name: "Courses",
     imgUrl: analytics,
     onclick: "",
     link: "/courses",
-    admin: false
+    admin: false,
   },
   {
     name: "Insights",
     imgUrl: dashboard,
     onclick: "",
     link: "/insights",
-    admin: false
+    admin: false,
   },
   {
     name: "Profile",
     imgUrl: dashboard,
     link: "/profile",
     onclick: "",
-    admin: false
+    admin: false,
   },
 ];
 

@@ -33,6 +33,15 @@ const Sidebar = () => {
             </div>
           </NavLink>
         ))}
+
+        <NavLink to={`http://127.0.0.1:5000`} target="_blank">
+          <div
+            className="flex justify-start items-center gap-4 my-8 mx-2"
+          >
+            <span className="opacity-60 font-semibold">Recidivism Predictor</span>
+          </div>
+        </NavLink>
+
         {admin === "true"
           ? navlinksadmin.map((link, index) => (
               <NavLink key={index} to={link.link}>
@@ -46,7 +55,10 @@ const Sidebar = () => {
             ))
           : ""}
 
-        <div className="flex justify-start items-center gap-4 my-8 mx-2 cursor-pointer" onClick={handleLogout}>
+        <div
+          className="flex justify-start items-center gap-4 my-8 mx-2 cursor-pointer"
+          onClick={handleLogout}
+        >
           <span className="opacity-60 font-semibold">Logout</span>
         </div>
       </div>
